@@ -1,19 +1,42 @@
-// --------------
-// Payments & Approvals Screen - Consistent design
-// Clean list of payments with status badges, bottom navigation
-// --------------
+// ------------------------------------------------------------
+// Payments & Approvals Screen
+//
+// - Displays all payment requests for a specific project
+// - Shows payment amount, requester, date, and approval status
+// - Approved payments display approver and approval date
+// - Uses ProjectDetailsBloc to fetch and display live project payment data
+// - Integrates theme toggle and consistent app styling
+// - Supports scrollable list and empty state message
+// ------------------------------------------------------------
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../Common/Services/theme_service.dart';
+import '../Bloc/project_details_event.dart';
 import '../Widgets/custom_button.dart';
 import '../Widgets/status_badge.dart';
 import '../Bloc/project_details_bloc.dart';
 import '../Bloc/project_details_state.dart';
 
-class PaymentsApprovalsScreen extends StatelessWidget {
+class PaymentsApprovalsScreen extends StatefulWidget {
   final String projectId;
 
   const PaymentsApprovalsScreen({required this.projectId, super.key});
+
+  @override
+  State<PaymentsApprovalsScreen> createState() => _PaymentsApprovalsScreenState();
+}
+
+class _PaymentsApprovalsScreenState extends State<PaymentsApprovalsScreen> {
+  @override
+  void initState() {
+    super.initState();
+    final projectId = widget.projectId;
+    final bloc = context.read<ProjectDetailsBloc>();
+    if (!(bloc.state is ProjectDetailsLoaded && (bloc.state as ProjectDetailsLoaded).project.projectId == projectId)) {
+      bloc.add(LoadProjectDetails(projectId));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +45,8 @@ class PaymentsApprovalsScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: colorScheme.tertiary,
         appBar: AppBar(
           title: const Text('Payments & Approvals'),
-          backgroundColor: colorScheme.surface,
-          foregroundColor: colorScheme.onSurface,
-          elevation: 0,
           actions: [
             IconButton(
               icon: const Icon(Icons.brightness_6),
@@ -44,9 +63,9 @@ class PaymentsApprovalsScreen extends StatelessWidget {
             if (state is ProjectDetailsError) {
               return Center(child: Text(state.message));
             }
-            if (state is ProjectDetailsLoaded && state.project.projectId == projectId) {
+            if (state is ProjectDetailsLoaded && state.project.projectId == widget.projectId) {
               final payments = state.project.payments;
-      
+
               if (payments.isEmpty) {
                 return const Center(
                   child: Text(
@@ -55,7 +74,7 @@ class PaymentsApprovalsScreen extends StatelessWidget {
                   ),
                 );
               }
-      
+
               return ListView.builder(
                 padding: const EdgeInsets.all(16),
                 itemCount: payments.length,

@@ -1,3 +1,7 @@
+// --------------
+// Task entity
+// --------------
+
 class TaskEntity {
   final String taskId;
   final String title;
@@ -18,6 +22,10 @@ class TaskEntity {
   });
 }
 
+// --------------
+// Sub-Task entity
+// --------------
+
 class SubTaskEntity {
   final String subTaskId;
   final String title;
@@ -30,6 +38,9 @@ class SubTaskEntity {
   });
 }
 
+// --------------
+// Activity Log entity
+// --------------
 class ActivityLogEntity {
   final String date;
   final String updatedBy;

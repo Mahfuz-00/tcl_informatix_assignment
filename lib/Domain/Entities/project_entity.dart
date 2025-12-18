@@ -1,3 +1,7 @@
+// --------------
+// Project entity
+// --------------
+
 import 'budget_entity.dart';
 import 'manager_entity.dart';
 import 'payment_entity.dart';

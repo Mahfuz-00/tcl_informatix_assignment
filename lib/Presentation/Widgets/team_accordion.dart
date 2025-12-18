@@ -1,3 +1,13 @@
+// ------------------------------------------------------------
+// Team Accordion Widget
+//
+// - Displays a team summary card
+// - Expands / collapses to show team members
+// - Hides expand icon if no members exist
+// - Uses smooth rotation animation for expand indicator
+// - Designed for non-technical business users (clear & readable)
+// ------------------------------------------------------------
+
 import 'package:flutter/material.dart';
 import 'custom_button.dart';
 

@@ -1,3 +1,7 @@
+// --------------
+// Timeline entity
+// --------------
+
 class TimelineEntity {
   final String startDate;
   final String endDate;
@@ -10,6 +14,10 @@ class TimelineEntity {
   });
 }
 
+
+// --------------
+// Milestone entity
+// --------------
 class MilestoneEntity {
   final String milestoneId;
   final String title;

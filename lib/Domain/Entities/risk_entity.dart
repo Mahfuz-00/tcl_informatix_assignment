@@ -1,3 +1,7 @@
+// --------------
+// Risk entity
+// --------------
+
 class RiskEntity {
   final String riskId;
   final String description;

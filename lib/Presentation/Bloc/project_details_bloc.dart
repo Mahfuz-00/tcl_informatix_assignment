@@ -1,3 +1,12 @@
+// ------------------------------------------------------------
+// ProjectDetailsBloc
+//
+// - Handles fetching detailed information for a single project using GetProjectDetails use case
+// - Emits states: ProjectDetailsInitial, ProjectDetailsLoading, ProjectDetailsLoaded, ProjectDetailsError
+// - Uses BLoC event LoadProjectDetails
+// ------------------------------------------------------------
+
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../Domain/Usecases/get_project_details.dart';

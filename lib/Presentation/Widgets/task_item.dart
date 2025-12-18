@@ -1,10 +1,19 @@
+// ------------------------------------------------------------
+// Task Item Widget
+//
+// - Displays a single task in a card layout
+// - Shows title, assigned team, priority, and status
+// - Visualizes progress using a linear progress bar
+// - Optionally renders subtasks with status indicators
+// - Optionally renders activity logs for task history
+// - Designed for ERP-style task & team management screens
+// ------------------------------------------------------------
+
+
 import 'package:flutter/material.dart';
 import 'custom_button.dart';
 import '../../Domain/Entities/task_entity.dart';
 
-// --------------
-// Sleek Task Item with Subtasks, Activity Logs & Inline Status
-// --------------
 class TaskItem extends StatelessWidget {
   final TaskEntity task;
   final bool showDetails;

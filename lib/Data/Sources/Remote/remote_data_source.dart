@@ -1,6 +1,6 @@
 // --------------
 // Remote data source interface – empty for now
-// When live backend exists, i will implement the same methods using http
+// When live backend exists(if ever), i will implement the same methods using http
 // --------------
 
 import '../../Models/company_model.dart';

@@ -1,3 +1,14 @@
+// ------------------------------------------------------------
+// Project Card Widget
+//
+// - Displays a summary view of a project
+// - Shows project name (max 2 lines) and current status badge
+// - Displays assigned project manager with avatar and designation
+// - Shows project timeline information
+// - Used in the Project List screen for navigation to details
+// ------------------------------------------------------------
+
+
 import 'package:flutter/material.dart';
 import 'custom_button.dart';
 import 'status_badge.dart';
@@ -11,6 +22,8 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
 
     return CustomCard(
       child: Padding(
@@ -47,8 +60,8 @@ class ProjectCard extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 20,
-                  backgroundColor: Colors.blueGrey[200],
-                  child: Icon(Icons.person, color: Colors.blueGrey[700]),
+                  backgroundColor: colorScheme.secondary,
+                  child: Icon(Icons.person, color: Colors.black),
                 ),
                 const SizedBox(width: 12),
                 Column(

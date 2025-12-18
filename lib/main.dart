@@ -1,6 +1,13 @@
-// --------------
-// Main entry point – updated for new BLoC structure
-// --------------
+// ------------------------------------------------------------
+// Application Entry Point
+//
+// - Initializes Flutter bindings
+// - Sets up dependency injection
+// - Provides global BLoC instances
+// - Manages app-wide theme (light / dark)
+// - Configures GoRouter-based navigation
+// ------------------------------------------------------------
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';

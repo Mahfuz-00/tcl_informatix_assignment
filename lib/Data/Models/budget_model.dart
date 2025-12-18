@@ -1,5 +1,5 @@
 // --------------
-// Budget hierarchy model
+// Budget, Spending Categories, Spending Sub-Categories model
 // --------------
 import 'package:json_annotation/json_annotation.dart';
 

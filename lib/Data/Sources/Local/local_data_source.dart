@@ -1,8 +1,7 @@
 // --------------
-// Local data source implementation using mock JSON file
+// Local data source implementation using mock JSON file(provided for assignment)
 // All data is currently in assets/MockAPI/data.json
-// Each method extracts only the portion needed for a specific feature
-// This mirrors what separate remote APIs would return in production
+// This mirrors what remote APIs would return in production
 // --------------
 
 import 'dart:convert';

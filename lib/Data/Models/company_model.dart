@@ -1,10 +1,7 @@
 // --------------
-// Company data transfer model (JSON → Dart)
-// Mirrors CompanyEntity structure exactly
+// Company, Head office, Contact model
 // --------------
 import 'package:json_annotation/json_annotation.dart';
-
-import 'project_model.dart';
 
 part 'company_model.g.dart';
 
@@ -14,14 +11,12 @@ class CompanyModel {
   final String name;
   final String currency;
   final HeadOffice headOffice;
-  final List<ProjectModel> projects;
 
   CompanyModel({
     required this.companyId,
     required this.name,
     required this.currency,
     required this.headOffice,
-    required this.projects,
   });
 
   factory CompanyModel.fromJson(Map<String, dynamic> json) => _$CompanyModelFromJson(json);

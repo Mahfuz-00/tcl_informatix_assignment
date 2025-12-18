@@ -1,3 +1,18 @@
+// ------------------------------------------------------------
+// Project Details Screen
+//
+// - Shows detailed information for a single project:
+//     • Summary card with name, manager, and status
+//     • Milestones with status icons
+//     • Risks with severity highlighting
+//     • Buttons for Tasks & Team, and Payments & Approvals
+//     • Budget breakdown with category/subcategory utilization
+// - Integrates ProjectDetailsBloc for live project updates
+// - Scrollable layout with consistent spacing and theme
+// - Navigation handled via GoRouter for downstream actions
+// ------------------------------------------------------------
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -36,12 +51,8 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: colorScheme.tertiary,
         appBar: AppBar(
           title: const Text('Project Details'),
-          backgroundColor: colorScheme.surface,
-          foregroundColor: colorScheme.onSurface,
-          elevation: 0,
           actions: [
             IconButton(
               icon: const Icon(Icons.brightness_6),
@@ -136,7 +147,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
                           child: ActionTile(
                             label: 'Tasks & Team',
                             icon: Icons.task_alt,
-                            color: Colors.orange,
+                            color: colorScheme.primary,
                             onTap: () => context.push('/tasks/${project.projectId}'),
                           ),
                         ),
@@ -162,7 +173,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
                           child: ActionTile(
                             label: 'Payments & Approvals',
                             icon: Icons.payment,
-                            color: Colors.green,
+                            color: colorScheme.secondary,
                             onTap: () => context.push('/payments/${project.projectId}'),
                           ),
                         ),

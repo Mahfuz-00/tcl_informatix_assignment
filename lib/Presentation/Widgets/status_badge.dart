@@ -1,3 +1,14 @@
+// ------------------------------------------------------------
+// Status Badge Widget
+//
+// - Displays a colored status label inside a rounded container
+// - Color is derived from business status values
+//   (Completed, Approved, In Progress, Pending, etc.)
+// - Used across project, task, and payment screens
+// - Ensures consistent visual language for status indicators
+// ------------------------------------------------------------
+
+
 import 'package:flutter/material.dart';
 
 class StatusBadge extends StatelessWidget {

@@ -1,6 +1,7 @@
 // --------------
-// Manager entity for project lead details.
+// Manager entity
 // --------------
+
 class ManagerEntity {
   final String employeeId;
   final String name;

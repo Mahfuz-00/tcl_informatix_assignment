@@ -1,3 +1,13 @@
+// ------------------------------------------------------------
+// Section Header Widget
+//
+// - Displays a bold section title using theme typography
+// - Used to separate logical sections in detail screens
+//   (e.g. Budget, Tasks, Team, Payments)
+// - Keeps section titles visually consistent across the app
+// ------------------------------------------------------------
+
+
 import 'package:flutter/material.dart';
 
 class SectionHeader extends StatelessWidget {

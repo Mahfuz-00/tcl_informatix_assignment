@@ -1,23 +1,18 @@
 // --------------
-// Domain entities – pure Dart classes, no JSON annotations
-// Mirror the structure present in the provided JSON only
+// Company entity
 // --------------
-
-import 'project_entity.dart';
 
 class CompanyEntity {
   final String companyId;
   final String name;
   final String currency;
   final HeadOfficeEntity headOffice;
-  final List<ProjectEntity> projects;
 
   CompanyEntity({
     required this.companyId,
     required this.name,
     required this.currency,
     required this.headOffice,
-    required this.projects,
   });
 }
 

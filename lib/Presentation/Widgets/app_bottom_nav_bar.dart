@@ -1,3 +1,13 @@
+// ------------------------------------------------------------
+// Application Bottom Navigation Bar
+//
+// - Provides primary app navigation (Home, Projects, Profile)
+// - Highlights active tab based on current route
+// - Uses GoRouter for route-aware navigation
+// - Profile tab is currently non-functional (UI placeholder)
+// ------------------------------------------------------------
+
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

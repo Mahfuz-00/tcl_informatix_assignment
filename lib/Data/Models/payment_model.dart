@@ -1,5 +1,5 @@
 // --------------
-// Payment and approval flow model
+// Payment, invoice, approval model
 // --------------
 import 'package:json_annotation/json_annotation.dart';
 

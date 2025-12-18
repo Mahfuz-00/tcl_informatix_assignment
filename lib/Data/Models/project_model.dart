@@ -1,5 +1,5 @@
 // --------------
-// Core project model – main structure
+// Project model
 // --------------
 import 'package:json_annotation/json_annotation.dart';
 

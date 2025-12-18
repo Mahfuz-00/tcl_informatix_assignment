@@ -11,9 +11,6 @@ CompanyModel _$CompanyModelFromJson(Map<String, dynamic> json) => CompanyModel(
   name: json['name'] as String,
   currency: json['currency'] as String,
   headOffice: HeadOffice.fromJson(json['headOffice'] as Map<String, dynamic>),
-  projects: (json['projects'] as List<dynamic>)
-      .map((e) => ProjectModel.fromJson(e as Map<String, dynamic>))
-      .toList(),
 );
 
 Map<String, dynamic> _$CompanyModelToJson(CompanyModel instance) =>
@@ -22,7 +19,6 @@ Map<String, dynamic> _$CompanyModelToJson(CompanyModel instance) =>
       'name': instance.name,
       'currency': instance.currency,
       'headOffice': instance.headOffice.toJson(),
-      'projects': instance.projects.map((e) => e.toJson()).toList(),
     };
 
 HeadOffice _$HeadOfficeFromJson(Map<String, dynamic> json) => HeadOffice(

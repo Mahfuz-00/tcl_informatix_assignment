@@ -1,3 +1,7 @@
+// --------------
+// Milestone model
+// --------------
+
 import 'package:json_annotation/json_annotation.dart';
 
 part 'milestone_model.g.dart';

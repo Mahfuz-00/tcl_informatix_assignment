@@ -1,5 +1,5 @@
 // --------------
-// Budget entity with categories and sub.
+// Budget entity
 // --------------
 class BudgetEntity {
   final int total;
@@ -12,6 +12,10 @@ class BudgetEntity {
     required this.categories,
   });
 }
+
+// --------------
+// Spending Categories entity
+// --------------
 
 class CategoryEntity {
   final String name;
@@ -27,6 +31,10 @@ class CategoryEntity {
   });
 }
 
+
+// --------------
+// Spending Sub-Categories entity
+// --------------
 class SubCategoryEntity {
   final String name;
   final int allocated;

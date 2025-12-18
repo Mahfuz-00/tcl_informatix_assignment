@@ -1,3 +1,7 @@
+// --------------
+// Timeline model
+// --------------
+
 import 'package:json_annotation/json_annotation.dart';
 import 'milestone_model.dart';
 

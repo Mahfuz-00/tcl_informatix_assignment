@@ -1,6 +1,15 @@
-// --------------
-// Updated dependency injection setup
-// --------------
+// ------------------------------------------------------------
+// Dependency Injection Setup (GetIt)
+//
+// - Centralized DI container for the app
+// - Registers:
+//   • Data sources (LocalDataSource)
+//   • Repositories (CompanyRepositoryImpl, ProjectRepositoryImpl)
+//   • Usecases (GetCompanyInfo, GetProjects, GetProjectDetails)
+//   • Blocs (CompanyBloc, ProjectsBloc, ProjectDetailsBloc)
+// - Lazy singletons for shared instances, factories for BLoCs
+// ------------------------------------------------------------
+
 import 'package:get_it/get_it.dart';
 
 import '../../Data/Repositories/company_repository_impl.dart';

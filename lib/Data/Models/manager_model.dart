@@ -1,5 +1,5 @@
 // --------------
-// Project manager model
+// Project Manager model
 // --------------
 import 'package:json_annotation/json_annotation.dart';
 

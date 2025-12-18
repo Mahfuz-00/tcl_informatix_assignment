@@ -1,3 +1,12 @@
+// ------------------------------------------------------------
+// ProjectsBloc
+//
+// - Handles loading of all projects using GetProjects use case
+// - Emits states: ProjectsInitial, ProjectsLoading, ProjectsLoaded, ProjectsError
+// - Uses BLoC event LoadProjects
+// ------------------------------------------------------------
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

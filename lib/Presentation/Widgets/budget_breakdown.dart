@@ -1,3 +1,14 @@
+// ------------------------------------------------------------
+// Budget Breakdown Widget
+//
+// - Displays budget utilization by category and sub-category
+// - Shows allocated vs spent amounts with progress indicators
+// - Supports nested sub-categories when available
+// - Utilization color highlights over-spending risk
+// - Used in Project Details screen for financial transparency
+// ------------------------------------------------------------
+
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../../../Domain/Entities/budget_entity.dart';

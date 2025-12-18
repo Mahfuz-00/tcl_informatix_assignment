@@ -1,5 +1,5 @@
 // --------------
-// Task hierarchy model
+// Task, Sub-Task, Activity model
 // --------------
 import 'package:json_annotation/json_annotation.dart';
 

@@ -1,3 +1,12 @@
+// ------------------------------------------------------------
+// CompanyBloc
+//
+// - Handles loading of company information using GetCompanyInfo use case
+// - Emits states: CompanyInitial, CompanyLoading, CompanyLoaded, CompanyError
+// - Uses BLoC event LoadCompanyInfo
+// ------------------------------------------------------------
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

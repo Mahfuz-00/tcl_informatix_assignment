@@ -1,3 +1,13 @@
+// ------------------------------------------------------------
+// Info Row Widget
+//
+// - Displays a single line of labeled information with icon
+// - Commonly used for metadata such as dates, timelines, IDs
+// - Automatically wraps long text using Expanded
+// - Ensures consistent spacing and typography across screens
+// ------------------------------------------------------------
+
+
 import 'package:flutter/material.dart';
 
 class InfoRow extends StatelessWidget {

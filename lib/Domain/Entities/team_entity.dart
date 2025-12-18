@@ -1,5 +1,5 @@
 // --------------
-// Team entity with members.
+// Team entity
 // --------------
 class TeamEntity {
   final String teamId;
@@ -13,6 +13,9 @@ class TeamEntity {
   });
 }
 
+// --------------
+// Member entity
+// --------------
 class MemberEntity {
   final String name;
   final String role;

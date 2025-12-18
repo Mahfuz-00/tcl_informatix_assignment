@@ -1,10 +1,14 @@
+// --------------
+// Payment entity
+// --------------
+
 class PaymentEntity {
   final String paymentId;
   final int amount;
   final String requestedBy;
   final String requestDate;
   final List<InvoiceEntity> invoices;
-  final ApprovalFlowEntity approvalFlow;
+  final ApprovalEntity approvalFlow;
 
   PaymentEntity({
     required this.paymentId,
@@ -16,6 +20,9 @@ class PaymentEntity {
   });
 }
 
+// --------------
+// Invoice entity
+// --------------
 class InvoiceEntity {
   final String invoiceId;
   final String vendor;
@@ -28,12 +35,16 @@ class InvoiceEntity {
   });
 }
 
-class ApprovalFlowEntity {
+
+// --------------
+// Approval entity
+// --------------
+class ApprovalEntity {
   final String approvedBy;
   final String approvedDate;
   final String status;
 
-  ApprovalFlowEntity({
+  ApprovalEntity({
     required this.approvedBy,
     required this.approvedDate,
     required this.status,

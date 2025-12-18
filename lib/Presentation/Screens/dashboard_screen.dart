@@ -1,8 +1,15 @@
-// --------------
-// Final Dashboard Screen - Clean, Professional, No Nested Scaffold
-// Dynamic company name in AppBar, project count right-aligned
-// Interactive charts, tappable cards, bottom navigation
-// --------------
+// ------------------------------------------------------------
+// Dashboard Screen
+//
+// - Main app dashboard with key metrics and interactive visualizations
+// - Dynamic AppBar showing company name from CompanyBloc
+// - Total Projects card with tappable segmented bar for project status counts
+// - Budget allocation pie chart by category, interactive with touch feedback
+// - Quick summary tiles for Pending Approvals and Active Tasks
+// - Uses CompanyBloc and ProjectsBloc for live data
+// - Bottom navigation bar consistent across app
+// ------------------------------------------------------------
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fl_chart/fl_chart.dart';
@@ -18,6 +25,7 @@ import '../Bloc/company_state.dart';
 import '../Bloc/project_bloc.dart';
 import '../Bloc/project_event.dart';
 import '../Bloc/project_state.dart';
+import '../Widgets/summary_tile.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -44,7 +52,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: colorScheme.tertiary,
         // Dynamic AppBar with company name from BLoC
         appBar: AppBar(
           title: BlocBuilder<CompanyBloc, CompanyState>(
@@ -55,10 +62,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
               return const Text('Loading...');
             },
           ),
-          centerTitle: false,
-          elevation: 0,
-          backgroundColor: colorScheme.surface,
-          foregroundColor: colorScheme.onSurface,
           actions: [
             IconButton(
               icon: const Icon(Icons.brightness_6),
@@ -120,7 +123,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                // Title and count on same line
                                 Row(
                                   children: [
                                     Icon(Icons.work, size: 32, color: colorScheme.primary),
@@ -293,21 +295,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       // Quick Summary
                       Text('Quick Summary', style: theme.textTheme.titleLarge),
                       const SizedBox(height: 16),
-                      GridView.count(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 16,
-                        mainAxisSpacing: 16,
-                        childAspectRatio: 0.8,
+                      Row(
                         children: [
-                          InkWell(
-                            onTap: () => context.push('/approvals'),
-                            child: _SummaryTile('Pending Approvals', pendingApprovals.toString(), Icons.pending_actions, Colors.red),
+                          Expanded(
+                            child: InkWell(
+                              onTap: () => context.push('/approvals'),
+                              child: SummaryTile(title: 'Pending Approvals', value: pendingApprovals.toString(), icon: Icons.pending_actions, color: Colors.red),
+                            ),
                           ),
-                          InkWell(
-                            onTap: () => context.push('/tasks'),
-                            child: _SummaryTile('Active Tasks', projects.fold(0, (sum, p) => sum + p.tasks.length).toString(), Icons.task, Colors.blue),
+                          const SizedBox(width: 16),
+                          Expanded(
+                            child: InkWell(
+                              onTap: () => context.push('/tasks'),
+                              child: SummaryTile(title: 'Active Tasks', value: projects.fold(0, (sum, p) => sum + p.tasks.length).toString(), icon: Icons.task, color: Colors.blue),
+                            ),
                           ),
                         ],
                       ),
@@ -319,24 +320,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
           },
         ),
         bottomNavigationBar: AppBottomNavBar(),
-      ),
-    );
-  }
-
-  Widget _SummaryTile(String title, String value, IconData icon, Color color) {
-    return CustomCard(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, size: 36, color: color),
-            const SizedBox(height: 8),
-            Text(title, style: const TextStyle(fontSize: 16), textAlign: TextAlign.center),
-            const SizedBox(height: 8),
-            Text(value, style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
-          ],
-        ),
       ),
     );
   }
