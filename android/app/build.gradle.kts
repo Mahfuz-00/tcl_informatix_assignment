@@ -31,10 +31,27 @@ android {
     }
 
     buildTypes {
-        release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+        getByName("debug") {
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
             signingConfig = signingConfigs.getByName("debug")
+        }
+        getByName("release") {
+            isMinifyEnabled = true   // enable code shrinking (R8)
+            isShrinkResources = true // enable resource shrinking
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+
+    // Customize APK names
+    applicationVariants.all {
+        outputs.all {
+            // Kotlin DSL uses "outputFileName" as a var
+            val appName = "ABC-Construction"
+            val buildTypeName = buildType.name
+            val version = versionName
+            (this as com.android.build.gradle.internal.api.BaseVariantOutputImpl).outputFileName =
+                "${appName}-${buildTypeName}-v${version}.apk"
         }
     }
 }
@@ -42,3 +59,4 @@ android {
 flutter {
     source = "../.."
 }
+

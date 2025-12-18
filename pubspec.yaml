@@ -39,6 +39,7 @@ dependencies:
   get_it: ^7.6.4
   fl_chart: ^0.68.0
   intl:
+  rename_app: ^1.6.5
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
