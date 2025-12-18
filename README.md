@@ -4,9 +4,10 @@
 ABC Construction Project Management App is a comprehensive Flutter-based application designed for construction project oversight. It provides project managers, team leads, and stakeholders with a centralized platform to efficiently plan, monitor, and control projects. Users can manage project timelines, budgets, tasks, team members, and payment workflows in real time, ensuring better collaboration, accountability, and informed decision-making across all phases of a construction project.
 
 - **Key highlights of the app:**
+  
     - Real-time project monitoring with status updates and milestone tracking. 
     - Task management with progress indicators, sub-tasks, and activity logs. 
-    - Team management through expandable accordions, showing roles and responsibilities. 
+    - Team management showing roles and responsibilities. 
     - Payment and approval workflows to track requests, approvals, and invoices. 
     - Budget management with utilization visualization and category breakdown. 
     - Customizable light and dark themes for optimal user experience. 
@@ -71,24 +72,44 @@ ABC Construction Project Management App is a comprehensive Flutter-based applica
 The screenshots are stored in `/screenshots` directory. Include them like this:
 
 ### Project List
-![Project List Light](screenshots/Project List Light.jpg)
-![Project List Dark](screenshots/Project List Dark.jpg)
+<table>
+  <tr>
+    <td><img src="screenshots/Project%20List%20Light.jpg" alt="Project List Light" width="300"/></td>
+    <td><img src="screenshots/Project%20List%20Dark.jpg" alt="Project List Dark" width="300"/></td>
+  </tr>
+</table>
 
 ### Dashboard
-![Dashboard-1](screenshots/Dashboard-1.jpg)
-![Dashboard-2](screenshots/Dashboard-2.jpg)
+<table>
+  <tr>
+    <td><img src="screenshots/Dashboard-1.jpg" alt="Dashboard 1" width="300"/></td>
+    <td><img src="screenshots/Dashboard-2.jpg" alt="Dashboard 2" width="300"/></td>
+  </tr>
+</table>
 
 ### Project Details
-![Project Details-1](screenshots/Project Details-1.jpg)
-![Project Details-2](screenshots/Project Details-2.jpg)
-![Project Details-3](screenshots/Project Details-3.jpg)
+<table>
+  <tr>
+    <td><img src="screenshots/Project%20Details-1.jpg" alt="Project Details 1" width="300"/></td>
+    <td><img src="screenshots/Project%20Details-2.jpg" alt="Project Details 2" width="300"/></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/Project%20Details-3.jpg" alt="Project Details 3" width="300"/></td>
+  </tr>
+</table>
 
 ### Tasks & Teams
-![Tasks and Teams-1](screenshots/Tasks and Teams-1.jpg)
-![Tasks and Teams-2](screenshots/Tasks and Teams-2.jpg)
+<table>
+  <tr>
+    <td><img src="screenshots/Tasks%20and%20Teams-1.jpg" alt="Tasks and Teams 1" width="300"/></td>
+    <td><img src="screenshots/Tasks%20and%20Teams-2.jpg" alt="Tasks and Teams 2" width="300"/></td>
+  </tr>
+</table>
 
 ### Payments & Approvals
-![Payments and Approvals](screenshots/Payments and Approvals.jpg)
+<img src="screenshots/Payments%20and%20Approvals.jpg" alt="Payments and Approvals" width="300"/>
+
+
 
 ---
 
