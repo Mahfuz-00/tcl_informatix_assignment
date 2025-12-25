@@ -18,11 +18,10 @@ ABC Construction Project Management App is a comprehensive Flutter-based applica
 ## Table of Contents
 - [Features](#features)
 - [Screenshots](#screenshots)
-- [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
-- [Dependencies](#dependencies)
-- [Usage](#usage)
-- [License](#license)
+- [Getting Started](#getting-started)
+
+
 
 ---
 
